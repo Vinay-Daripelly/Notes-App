@@ -1,0 +1,115 @@
+.form {
+  width: 100%;
+  max-width: 360px;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+.subtitle {
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.inputGroup {
+  margin-bottom: 1.25rem;
+}
+
+.label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline-color: #007bff;
+}
+
+.button {
+  width: 100%;
+  padding: 0.85rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #007bff;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.toggleText {
+  text-align: center;
+  margin-top: 1.5rem;
+  color: #666;
+}
+
+.toggleLink {
+  color: #007bff;
+  font-weight: 600;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: inherit;
+}
+
+.resendContainer {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.timerText {
+  margin-left: 0.5rem;
+  color: #666;
+}
+
+.toggleLink:disabled {
+  color: #999;
+  cursor: not-allowed;
+  text-decoration: none;
+}
+
+.titleHeader {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+.loginCard {
+  --accent-color: #007bff; /* Blue for login */
+}
+
+.signupCard {
+  --accent-color: #28a745; /* Green for signup */
+}
+.button {
+  width: 100%;
+  padding: 0.85rem;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--accent-color); /* Use the variable */
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+.toggleLink {
+  color: var(--accent-color); /* Use the variable */
+  font-weight: 600;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: inherit;
+}
