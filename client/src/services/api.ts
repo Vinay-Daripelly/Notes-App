@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-const API = axios.create({ baseURL: 'http://localhost:5000/api' });
-
+// const API = axios.create({ baseURL: 'http://localhost:5000/api' });
+export const API = axios.create({ baseURL: '/api' });
 // Interceptor to add the token to every request
 API.interceptors.request.use((req) => {
   const userInfo = localStorage.getItem('userInfo');
@@ -9,7 +9,7 @@ API.interceptors.request.use((req) => {
     req.headers.Authorization = `Bearer ${JSON.parse(userInfo).token}`;
   }
   return req;
-});
+}); 
 
 // NEW Auth API calls
 export const requestOtp = (userData: { email: string; name?: string }) => API.post('/users/request-otp', userData);

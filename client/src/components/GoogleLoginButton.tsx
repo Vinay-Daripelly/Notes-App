@@ -2,9 +2,9 @@ import React from 'react';
 import { useGoogleLogin } from '@react-oauth/google';
 import { useNavigate } from 'react-router-dom';
 import toast from 'react-hot-toast';
-import axios from 'axios';
-
-const API = axios.create({ baseURL: 'http://localhost:5000/api' });
+//import axios from 'axios';
+import { API } from '../services/api';
+//const API = axios.create({ baseURL: 'http://localhost:5000/api' });
 
 const GoogleLoginButton: React.FC = () => {
   const navigate = useNavigate();
