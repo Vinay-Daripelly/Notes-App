@@ -1,6 +1,6 @@
 # Full-Stack Note-Taking Application
 
-This is a complete, full-stack note-taking web application featuring a secure, modern authentication system and full CRUD (Create, Read, Update, Delete) functionality for managing user-specific notes. The project is designed with a clean, responsive user interface and a robust back-end API.
+This is a complete, full-stack note-taking web application featuring a secure authentication system and full CRUD (Create, Read, Update, Delete) functionality for managing user-specific notes. The project is designed with a clean, responsive user interface and a robust back-end API.
 
 ---
 
@@ -12,7 +12,7 @@ This is a complete, full-stack note-taking web application featuring a secure, m
 - **Secure API**: The back-end API is protected using JSON Web Tokens (JWT). Users can only access and manage their own notes.
 - **Note Management**: Once authenticated, users can create, view, and delete their personal notes on a clean dashboard interface.
 - **Responsive UI**: The front-end is designed to be fully responsive, providing an optimal user experience on both desktop and mobile devices.
-- **Asynchronous Feedback**: The user interface provides clear feedback for all operations, including loading indicators for ongoing API requests and toast notifications for success or error messages.
+- **Asynchronous Feedback**: Clear feedback for all operations, including loading indicators and toast notifications for success or error messages.
 - **Persistent Login**: The application maintains the user's session, automatically redirecting logged-in users to the dashboard.
 
 ---
@@ -31,23 +31,31 @@ This is a complete, full-stack note-taking web application featuring a secure, m
 
 ## Local Setup and Installation
 
-To clone and run this application on your local machine, you will need to have **Node.js**, **npm**, and **Git** installed.
+To clone and run this application on your local machine, you need **Node.js**, **npm**, and **Git** installed.
 
 ### 1. Clone the Repository
 
 ```bash
-git clone url
-2. Back-End Server Setup
+git clone https://github.com/Vinay-Daripelly/Notes-App.git
+```
+
+---
+
+### 2. Back-End Server Setup
+
 Navigate to the server directory:
+```bash
 cd server
+```
+
 Install dependencies:
-
+```bash
 npm install
-Create a new file named .env in the server/ directory. Copy the structure below and fill it with your own credentials.
+```
 
-.env.example for Server:
+Create a new file named `.env` in the `server/` directory. Copy the structure below and fill it with your own credentials:
 
-env
+```env
 PORT=5000
 MONGO_URI=
 JWT_SECRET=
@@ -60,53 +68,62 @@ EMAIL_PASS=
 GOOGLE_CLIENT_ID=
 GOOGLE_CLIENT_SECRET=
 CLIENT_URL=http://localhost:5173
-How to get the values:
+```
 
-Key	Description	Source
-MONGO_URI	Your connection string for the MongoDB database	MongoDB Atlas Dashboard
-JWT_SECRET	A long, random, secret string used to sign JSON Web Tokens	Create your own secret string
-EMAIL_USER	The Gmail account from which OTP emails will be sent	Your Gmail account
-EMAIL_PASS	The 16-character App Password generated from your Google Account	Google Account Security Settings → App Passwords
-GOOGLE_CLIENT_ID	The Client ID for your web application	Google Cloud Console → APIs & Services → Credentials
-GOOGLE_CLIENT_SECRET	The Client Secret for your web application	Google Cloud Console → APIs & Services → Credentials
-CLIENT_URL	The URL of your front-end application (default: http://localhost:5173)	Manual setup
+**How to get the values:**
+- **MONGO_URI**: Your MongoDB Atlas connection string.
+- **JWT_SECRET**: A long, random string to sign JSON Web Tokens.
+- **EMAIL_USER**: Gmail account for sending OTPs.
+- **EMAIL_PASS**: App Password generated from your Google Account.
+- **GOOGLE_CLIENT_ID** and **GOOGLE_CLIENT_SECRET**: From Google Cloud Console → APIs & Services → Credentials.
+- **CLIENT_URL**: URL of your front-end application (default: `http://localhost:5173`).
 
 Run the server:
+```bash
 npm run dev
+```
 
-3. Front-End Client Setup
+---
+
+### 3. Front-End Client Setup
+
 In a new terminal, navigate to the client directory:
-
+```bash
 cd client
+```
+
 Install dependencies:
+```bash
 npm install
+```
 
-Create a new file named .env in the client/ directory. Copy the structure below and fill it with your Google Client ID.
-
-.env.example for Client:
+Create a new file named `.env` in the `client/` directory. Add your Google Client ID:
+```env
 VITE_GOOGLE_CLIENT_ID=
-How to get the value:
-VITE_GOOGLE_CLIENT_ID	The same Client ID used for the backend. The VITE_ prefix is required by Vite.	Google Cloud Console → APIs & Services → Credentials
+```
 
 Run the client:
+```bash
 npm run dev
+```
+
 Your application is now fully running locally.
 
-Deployment
-This application is configured for a single-service deployment on a platform like Render.
+---
 
-Build Command
+## Deployment
+
+This application is configured for deployment on platforms like **Render**.
+
+**Build Command:**
+```bash
 npm install --prefix client && npm install --prefix server && npm run build --prefix client && npm run build --prefix server
-Start Command
+```
 
+**Start Command:**
+```bash
 npm start --prefix server
+```
+
 All necessary environment variables listed above must be added to the deployment service's environment settings.
 
-
-
----
-
-npm start --prefix server
-All necessary environment variables listed above must be added to the deployment service's environment settings.
-
----
