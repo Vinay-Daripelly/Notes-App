@@ -28,7 +28,7 @@ app.use('/api/notes', noteRoutes);
 
 if (process.env.NODE_ENV === 'production') {
   const __dirname = path.resolve();
-  const clientBuildPath = path.join(__dirname, '../client', 'dist');
+  const clientBuildPath = path.join(__dirname, 'client', 'dist');
 
   app.use(express.static(clientBuildPath));
 
